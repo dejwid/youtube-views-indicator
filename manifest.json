@@ -1,0 +1,17 @@
+{
+  "name": "Youtube views bar",
+  "description" : "Shows a stats bar with views count comparing to other videos",
+  "version": "1.0",
+  "manifest_version": 2,
+  "web_accessible_resources": ["script.js"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ]
+}
